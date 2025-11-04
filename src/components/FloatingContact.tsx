@@ -9,8 +9,8 @@ export default function FloatingContact() {
   const [showWindow, setShowWindow] = useState(false);
 
   // Replace with your actual contact info
-  const phoneNumber = "+2348012345678";
-  const whatsappNumber = "+2348012345678";
+  const phoneNumber = "+2348063887516";
+  const whatsappNumber = "+2348063887516";
   const whatsappMessage = "Hello! I'd like to know more about eVehicles.";
   const emailAddress = "support@evechicles.com";
   const emailSubject = "Inquiry about eVehicles";
