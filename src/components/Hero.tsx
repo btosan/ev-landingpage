@@ -52,7 +52,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen bg-black text-gray-100 flex flex-col overflow-hidden md:-mt-2 lg:mt-0 -mt-3.5 lg:pb-12">
+    <section className="relative w-full h-screen bg-black text-gray-100 flex flex-col overflow-hidden md:-mt-2 lg:mt-0 -mt-4 lg:pb-12">
       {/* === TOP IMAGE SLIDER === */}
       <div className="relative w-full h-[75%] md:px-16">
         <div className="relative w-full h-full">
