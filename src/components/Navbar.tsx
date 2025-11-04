@@ -102,7 +102,7 @@ export default function Navbar() {
             </div>
 
             {/* Links */}
-            <ul className="text-gray-100 text-lg space-y-8 text-center mt-12">
+            <ul className="text-gray-100 text-lg space-y-6 text-center mt-6">
               <li>
                 <a href="#about" onClick={() => setOpen(false)} className="hover:text-yellow-500 transition">
                   About Us
@@ -126,7 +126,7 @@ export default function Navbar() {
             </ul>
 
             {/* Mobile Buttons */}
-            <div className="flex flex-col items-center space-y-8 mt-16 w-3/4">
+            <div className="flex flex-col items-center space-y-6 mt-6 w-3/4">
               <button className="w-full px-6 py-3 border border-yellow-500 text-yellow-500 text-base font-semibold rounded-full hover:bg-yellow-500 hover:text-black transition">
                 Contact
               </button>
