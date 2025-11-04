@@ -64,16 +64,3 @@ const nextConfig = {
 export default nextConfig;
 
 
-// module.exports = {
-//   async redirects() {
-//     return [
-//       {
-//         source: '/blog/create',
-//         has: [{ type: 'cookie', key: 'access' }],
-//         destination: '/',
-//         permanent: false,
-//       },
-//     ];
-//   },
-// };
-
