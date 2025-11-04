@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 const models = [
   {
@@ -35,6 +36,13 @@ const models = [
 ];
 
 export default function MeetBYDFamily() {
+  const router = useRouter();
+
+  const handleBookTestDrive = () => {
+    // Navigate with query param and scroll to enquiry form
+    router.push("/?type=test_drive#enquiry");
+  };
+
   return (
     <section
       id="models"
@@ -93,7 +101,10 @@ export default function MeetBYDFamily() {
                 {model.price}
               </p>
               <div className="flex flex-wrap gap-4">
-                <button className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-xl hover:bg-yellow-400 transition-all">
+                <button
+                  onClick={handleBookTestDrive}
+                  className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-xl hover:bg-yellow-400 transition-all"
+                >
                   Book Test Drive
                 </button>
                 <button className="px-6 py-3 border border-yellow-500 text-yellow-500 rounded-xl hover:bg-yellow-500 hover:text-black transition-all">

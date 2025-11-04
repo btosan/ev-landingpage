@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
+import { useRouter } from "next/navigation";
 
 const slides = [
   {
@@ -42,6 +43,7 @@ const slides = [
 export default function HeroSection() {
   const imageSwiperRef = useRef<any>(null);
   const textSwiperRef = useRef<any>(null);
+  const router = useRouter();
 
   // ✅ Keep both swipers perfectly synced
   useEffect(() => {
@@ -50,6 +52,11 @@ export default function HeroSection() {
       textSwiperRef.current.controller.control = imageSwiperRef.current;
     }
   }, []);
+
+  // ✅ Navigate to enquiry form with type=test_drive
+  const handleBookTestDrive = () => {
+    router.push("/?type=test_drive#enquiry");
+  };
 
   return (
     <section className="relative w-full h-screen bg-black text-gray-100 flex flex-col overflow-hidden md:-mt-2 lg:mt-0 -mt-4 lg:pb-12">
@@ -82,8 +89,6 @@ export default function HeroSection() {
                     className="object-cover rounded-xl lg:rounded-3xl"
                     priority={index === 0}
                   />
-                  {/* ✅ Subtle overlay for text clarity */}
-                  {/* <div className="absolute inset-0 bg-black/5 z-10 rounded-xl lg:rounded-3xl" /> */}
                 </div>
               </SwiperSlide>
             ))}
@@ -133,18 +138,16 @@ export default function HeroSection() {
                   {slide.description}
                 </motion.p>
 
-                {/* ✅ CTA button preserved visually but functional as link */}
-                <motion.a
-                  href="https://wa.me/2348012345678?text=Hi!%20I’m%20interested%20in%20BYD%20cars."
-                  target="_blank"
-                  rel="noopener noreferrer"
+                {/* ✅ CTA button – unchanged visually, now navigates to enquiry form */}
+                <motion.button
+                  onClick={handleBookTestDrive}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                   className="bg-yellow-500 text-black text-lg lg:text-xl px-8 py-3 lg:px-12 lg:py-4 rounded-2xl font-semibold hover:cursor-pointer hover:bg-yellow-400 transition-all inline-block"
                 >
                   {slide.cta}
-                </motion.a>
+                </motion.button>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -165,7 +168,7 @@ export default function HeroSection() {
         :global(.custom-pagination .swiper-pagination-bullet) {
           width: 10px;
           height: 10px;
-          background: #f1f1f1; /* inactive */
+          background: #f1f1f1;
           border-radius: 50%;
           margin: 6px 0 !important;
           opacity: 1;
@@ -173,7 +176,7 @@ export default function HeroSection() {
         }
 
         :global(.custom-pagination .swiper-pagination-bullet-active) {
-          background: #facc15; /* active */
+          background: #facc15;
           transform: scale(1.3);
         }
       `}</style>

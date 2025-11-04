@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
 export default function EnquiryForm() {
@@ -12,6 +12,16 @@ export default function EnquiryForm() {
     model: "",
     type: "test_drive",
   });
+
+  // 👇 Automatically set form type & scroll when ?type=test_drive or ?type=quote is in the URL
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const typeParam = params.get("type");
+    if (typeParam === "test_drive" || typeParam === "quote") {
+      setFormData((prev) => ({ ...prev, type: typeParam }));
+      document.getElementById("enquiry")?.scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement>) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
