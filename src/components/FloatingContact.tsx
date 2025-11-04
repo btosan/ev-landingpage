@@ -77,10 +77,10 @@ export default function FloatingContact() {
               </button>
             </div>
             <div className="flex items-center gap-2 mb-3">
-              <div className="text-2xl">Hello</div>
-              <h3 className="font-bold text-lg">Chat with us!</h3>
+              <div className="lg:text-2xl text-xl">Hello</div>
+              <h3 className="font-bold lg:text-lg text-base">Chat with us!</h3>
             </div>
-            <p className="text-sm mb-4">Need some help? We're here to assist you.</p>
+            <p className="lg:text-sm text-xs mb-4">Need some help? We're here to assist you.</p>
             <button
               onClick={handleOpenWindow}
               className="w-full bg-yellow-500 text-black hover:cursor-pointer px-4 py-2 rounded-full font-semibold hover:bg-yellow-400 transition-all"
