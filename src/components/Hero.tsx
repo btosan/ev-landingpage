@@ -95,7 +95,7 @@ export default function HeroSection() {
       </div>
 
       {/* === BOTTOM TEXT & CTA === */}
-      <div className="relative w-full h-[25%] bg-black flex flex-col md:flex-row items-center justify-between px-6 md:px-16 md:py-4 py-8 ">
+      <div className="relative w-full h-auto bg-black flex flex-col md:flex-row items-center justify-between px-6 md:px-16 md:py-4 py-8 ">
         {/* LEFT COLUMN */}
         <div className="w-full md:w-1/5 flex justify-start md:justify-center mb-6 md:mb-0">
           <span className="text-yellow-400 uppercase tracking-widest text-sm font-medium">

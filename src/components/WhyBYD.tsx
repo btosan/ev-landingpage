@@ -46,7 +46,7 @@ export default function WhyBYDSection() {
           viewport={{ once: true }}
           className="z-10"
         >
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-yellow-400 uppercase mt-3 md:mt-12 mb-6">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-gray-300 uppercase mt-3 md:mt-12 mb-6">
             Why Nigerians Are Switching to BYD
           </h2>
 
@@ -83,7 +83,7 @@ export default function WhyBYDSection() {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
           viewport={{ once: true }}
-          className="relative w-full h-[300px] md:h-[450px] lg:h-[500px] rounded-2xl overflow-hidden"
+          className="relative w-full h-[300px] md:h-[450px] lg:h-[500px] rounded-2xl border-t-8 border-b-8 border-yellow-500 overflow-hidden"
         >
           <Image
             src="/assets/why-byd.png"
