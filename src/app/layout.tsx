@@ -1,5 +1,6 @@
 // app/layout.tsx
 import "./globals.css";
+import type { Metadata } from "next";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import FloatingContact from "@/components/FloatingContact";
@@ -10,7 +11,23 @@ export const metadata = {
     "Explore BYD electric cars in Nigeria — Dolphin, Atto 3, Tang, and Seal. Save on fuel, enjoy cutting-edge EV technology, and drive the future today.",
   keywords:
     "BYD Nigeria, electric vehicles Nigeria, BYD Dolphin, BYD Atto 3, EV Lagos, affordable electric cars Nigeria",
+      icons: {
+    icon: '/favicon.ico',
+  },
 };
+
+// Define the ViewPort type
+type ViewPort = {
+  themeColor: string;
+  width: string;
+  colorScheme: string;
+};
+
+export const viewport: ViewPort = {
+  themeColor: '#000000',
+  width: 'device-width',
+  colorScheme: 'dark'
+}
 
 export default function RootLayout({
   children,
