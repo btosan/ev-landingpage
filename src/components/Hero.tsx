@@ -52,9 +52,9 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen lg:h-dull bg-black text-gray-100 flex flex-col overflow-hidden md:-mt-2 lg:mt-0 -mt-3.5 lg:pb-12">
+    <section className="relative w-full h-screen bg-black text-gray-100 flex flex-col overflow-hidden md:-mt-2 lg:mt-0 -mt-3.5 lg:pb-12">
       {/* === TOP IMAGE SLIDER === */}
-      <div className="relative w-full h-[70%] md:px-16">
+      <div className="relative w-full h-[75%] md:px-16">
         <div className="relative w-full h-full">
           <Swiper
             modules={[Autoplay, Pagination, Controller]}
@@ -95,7 +95,7 @@ export default function HeroSection() {
       </div>
 
       {/* === BOTTOM TEXT & CTA === */}
-      <div className="relative w-full h-auto bg-black flex flex-col md:flex-row items-center justify-between px-6 md:px-16 md:py-4 py-8 lg:py-12">
+      <div className="relative w-full h-[25%] bg-black flex flex-col md:flex-row items-center justify-between px-6 md:px-16 md:py-4 py-8 ">
         {/* LEFT COLUMN */}
         <div className="w-full md:w-1/5 flex justify-start md:justify-center mb-6 md:mb-0">
           <span className="text-yellow-400 uppercase tracking-widest text-sm font-medium">
@@ -119,7 +119,7 @@ export default function HeroSection() {
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.8 }}
-                  className="md:text-3xl lg:text-5xl text-2xl font-bold uppercase text-gray-100 mb-3"
+                  className="md:text-3xl lg:text-5xl text-2xl font-bold uppercase text-gray-100 mb-3 md:mt-12"
                 >
                   {slide.title}
                 </motion.h1>

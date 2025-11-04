@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 export default function FloatingContact() {
   const [isMobile, setIsMobile] = useState(false);
-  const [showCallout, setShowCallout] = useState(true);
+  const [showCallout, setShowCallout] = useState(false); // ← Changed: false initially
   const [showWindow, setShowWindow] = useState(false);
 
   // Replace with your actual contact info
@@ -25,6 +25,15 @@ export default function FloatingContact() {
     return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
+  // ← NEW: Show callout after 1 minute
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowCallout(true);
+    }, 10000); // 60 seconds = 1 minute
+
+    return () => clearTimeout(timer);
+  }, []);
+
   const handleOpenWindow = () => {
     setShowCallout(false);
     setShowWindow(true);
@@ -41,19 +50,19 @@ export default function FloatingContact() {
   return (
     <>
       {/* Floating Icon */}
-      <div className="fixed bottom-6 right-6 lg:botom-32 z-50">
+      <div className="fixed bottom-6 right-6 lg:botom-32 z-50 ">
         <motion.button
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           onClick={handleOpenWindow}
-          className="w-14 h-14 bg-yellow-500 text-black rounded-full shadow-lg flex items-center justify-center hover:bg-yellow-400 hover:cursor-pointer transition-all"
+          className="w-14 h-14 bg-yellow-500 text-black rounded-full border border-gray-500/50 shadow-sm lg:shadow-lg shadow-gray-500/50 flex items-center justify-center hover:bg-yellow-400 hover:cursor-pointer transition-all"
           aria-label="Contact Us"
         >
           <MessageCircle size={28} />
         </motion.button>
       </div>
 
-      {/* Callout (shows on load) */}
+      {/* Callout (shows after 1 minute) */}
       <AnimatePresence>
         {showCallout && (
           <motion.div

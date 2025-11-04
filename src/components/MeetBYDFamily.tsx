@@ -47,7 +47,7 @@ export default function MeetBYDFamily() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-bold text-yellow-500 uppercase my-4"
+          className="text-3xl md:text-5xl font-bold text-gray-300 uppercase my-4"
         >
           Meet the BYD Family
         </motion.h2>

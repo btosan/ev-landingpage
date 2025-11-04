@@ -46,7 +46,7 @@ export default function WhyBYDSection() {
           viewport={{ once: true }}
           className="z-10"
         >
-          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-yellow-400 uppercase mb-6">
+          <h2 className="text-2xl md:text-4xl lg:text-5xl font-bold text-yellow-400 uppercase mt-3 md:mt-12 mb-6">
             Why Nigerians Are Switching to BYD
           </h2>
 

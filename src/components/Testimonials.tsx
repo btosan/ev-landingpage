@@ -9,23 +9,31 @@ const testimonials = [
     location: "Lagos",
     image: "/assets/people/shop-woman.jpg",
     quote:
-      "I drive from Lekki to Ikeja daily — my BYD Dolphin saves me over ₦100,000 monthly on fuel. Smooth, silent, and stylish!",
+      "I drive from Lekki to Ikeja daily — my BYD Dolphin saves me over ₦100,000 monthly on fuel. Smooth, silent, and stylish! eVehicles NG made the whole process effortless.",
   },
   {
     name: "Aisha K.",
     location: "Abuja",
     image: "/assets/people/ngugiwa.jpg",
     quote:
-      "The Atto 3 is a dream. I charge at home overnight and never worry about queues or petrol prices again.",
+      "The Atto 3 is a dream. I charge at home overnight and never worry about queues or petrol prices again. eVehicles NG guided me from test drive to delivery seamlessly.",
   },
   {
     name: "Tunde O.",
     location: "Port Harcourt",
     image: "/assets/people/woman.jpg",
     quote:
-      "Maintenance is almost zero. Just tires and washing. I’ll never go back to petrol again!",
+      "Maintenance is almost zero — just tires and washing. I’ll never go back to petrol again. eVehicles NG’s after-sales team checks in regularly — that’s real service!",
+  },
+  {
+    name: "Chimsom O.",
+    location: "Enugu",
+    image: "/assets/people/woman2.jpg",
+    quote:
+      "My BYD Tang is the best decision I’ve made for my family. Spacious, powerful, and eco-friendly. eVehicles NG handled everything, including home charging setup.",
   },
 ];
+
 
 export default function TestimonialsSection() {
   return (
@@ -37,7 +45,7 @@ export default function TestimonialsSection() {
           whileInView={{ y: 0, opacity: 1 }}
           transition={{ duration: 0.6 }}
           viewport={{ once: true }}
-          className="text-3xl md:text-5xl font-bold text-yellow-500 uppercase"
+          className="text-3xl md:text-5xl font-bold text-gray-300 uppercase"
         >
           Real Owners. Real Stories.
         </motion.h2>

@@ -11,7 +11,7 @@ export default function Navbar() {
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-90 text-gray-100 border-b border-gray-800">
-      <div className="mx-auto px-6 md:px-16 py-3 flex items-center justify-between">
+      <div className="mx-auto px-6 md:px-16 py-2 flex items-center justify-between">
         {/* === LOGO (Responsive, Sharp, No Height Impact) === */}
         <div className="flex items-center justify-center ">
           <Link href={'/'} className="flex items-center justify-center w-full relative h-12 md:h-14 lg:h-16 ">
@@ -38,11 +38,11 @@ export default function Navbar() {
               Pricing
             </a>
           </li>
-          <li>
+          {/* <li>
             <a href="#blog" className="hover:text-yellow-500 transition">
               Blog
             </a>
-          </li>
+          </li> */}
           <li>
             <a href="#faq" className="hover:text-yellow-500 transition">
               FAQ
@@ -102,7 +102,7 @@ export default function Navbar() {
             </div>
 
             {/* Links */}
-            <ul className="text-gray-100 text-lg space-y-6 text-center mt-6">
+            <ul className="text-gray-100 text-lg space-y-6 text-center">
               <li>
                 <a href="#about" onClick={() => setOpen(false)} className="hover:text-yellow-500 transition">
                   About Us
@@ -113,11 +113,11 @@ export default function Navbar() {
                   Pricing
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#blog" onClick={() => setOpen(false)} className="hover:text-yellow-500 transition">
                   Blog
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a href="#faq" onClick={() => setOpen(false)} className="hover:text-yellow-500 transition">
                   FAQ
