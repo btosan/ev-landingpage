@@ -69,7 +69,7 @@ export default function FloatingContact() {
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            className="fixed bottom-24 right-6 z-50 bg-white text-gray-900 p-4 rounded-xl shadow-2xl max-w-xs"
+            className="fixed bottom-24 right-6 z-50 bg-white text-gray-900 border border-yellow-400 p-4 rounded-xl shadow-2xl max-w-xs"
           >
             <div className="flex justify-end">
               <button onClick={handleCloseCallout} className="text-gray-500 hover:text-gray-700 hover:cursor-pointer">
@@ -102,7 +102,7 @@ export default function FloatingContact() {
             initial={{ opacity: 0, y: 20, scale: 0.9 }}
             animate={{ opacity: 1, y: 0, scale: 1 }}
             exit={{ opacity: 0, y: 20, scale: 0.9 }}
-            className="fixed bottom-24 md:right-6 right-2 z-50 bg-white text-gray-900 md:p-4 p-5 rounded-xl shadow-2xl max-w-sm w-full"
+            className="fixed bottom-24 md:right-6 right-2 z-50 bg-white text-gray-900 border border-yellow-400 md:p-4 p-5 rounded-xl shadow-2xl max-w-sm w-full"
           >
             <div className="flex justify-between items-center mb-4">
               <h3 className="font-bold text-lg">Contact Us</h3>
