@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { motion } from "framer-motion";
 
 export default function EnquiryForm() {
   const [formData, setFormData] = useState({
@@ -18,24 +19,44 @@ export default function EnquiryForm() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+
     const msg = `Hi, I'm ${formData.name} from ${formData.city}. I'm interested in the BYD ${formData.model} — I'd like to ${
       formData.type === "test_drive" ? "book a test drive" : "request a quote"
-    }.`;
-    const url = `https://wa.me/2348012345678?text=${encodeURIComponent(msg)}`;
+    }. My number is ${formData.phone}.`;
+
+    const url = `https://wa.me/2348063887516?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank");
   };
 
   return (
-    <section id="enquiry" className="bg-zinc-950 text-gray-100 py-20 px-6 md:px-16">
-      <h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
-        Get Started — <span className="text-yellow-500">Request a Quote or Test Drive</span>
-      </h2>
+    <section
+      id="enquiry"
+      className="bg-black text-gray-100 py-20 px-6 md:px-16 lg:px-24"
+    >
+      <div className="max-w-4xl mx-auto text-center">
+        <motion.h2
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          className="text-3xl md:text-5xl font-bold mb-6 text-yellow-500"
+        >
+          Get Started — Request a Quote or Test Drive
+        </motion.h2>
 
-      <form
-        onSubmit={handleSubmit}
-        className="max-w-2xl mx-auto bg-black border border-zinc-800 rounded-2xl p-8 space-y-5"
-      >
-        <div className="grid md:grid-cols-2 gap-5">
+        <motion.p
+          initial={{ opacity: 0 }}
+          whileInView={{ opacity: 1 }}
+          transition={{ delay: 0.2 }}
+          className="text-gray-400 mb-10 max-w-2xl mx-auto"
+        >
+          Fill in your details below, and an eVehicles NG team member will reach out to
+          schedule your BYD test drive or send a personalized quote.
+        </motion.p>
+
+        <form
+          onSubmit={handleSubmit}
+          className="grid grid-cols-1 md:grid-cols-2 gap-6 bg-gray-900 p-8 rounded-2xl shadow-lg"
+        >
           <input
             type="text"
             name="name"
@@ -43,7 +64,7 @@ export default function EnquiryForm() {
             value={formData.name}
             onChange={handleChange}
             required
-            className="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500"
+            className="w-full p-4 rounded-xl bg-gray-800 border border-gray-700 text-gray-100 placeholder-gray-500 focus:border-yellow-500 outline-none"
           />
           <input
             type="tel"
@@ -52,18 +73,15 @@ export default function EnquiryForm() {
             value={formData.phone}
             onChange={handleChange}
             required
-            className="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500"
+            className="w-full p-4 rounded-xl bg-gray-800 border border-gray-700 text-gray-100 placeholder-gray-500 focus:border-yellow-500 outline-none"
           />
-        </div>
-
-        <div className="grid md:grid-cols-2 gap-5">
           <input
             type="email"
             name="email"
-            placeholder="Email Address"
+            placeholder="Email Address (optional)"
             value={formData.email}
             onChange={handleChange}
-            className="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500"
+            className="w-full p-4 rounded-xl bg-gray-800 border border-gray-700 text-gray-100 placeholder-gray-500 focus:border-yellow-500 outline-none"
           />
           <input
             type="text"
@@ -72,54 +90,57 @@ export default function EnquiryForm() {
             value={formData.city}
             onChange={handleChange}
             required
-            className="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500"
+            className="w-full p-4 rounded-xl bg-gray-800 border border-gray-700 text-gray-100 placeholder-gray-500 focus:border-yellow-500 outline-none"
           />
-        </div>
+          <select
+            name="model"
+            value={formData.model}
+            onChange={handleChange}
+            required
+            className="w-full p-4 rounded-xl bg-gray-800 border border-gray-700 text-gray-100 focus:border-yellow-500 outline-none md:col-span-2"
+          >
+            <option value="">Select BYD Model</option>
+            <option value="Dolphin">BYD Dolphin</option>
+            <option value="Atto 3">BYD Atto 3</option>
+            <option value="Seal">BYD Seal</option>
+            <option value="Tang">BYD Tang</option>
+          </select>
 
-        <select
-          name="model"
-          value={formData.model}
-          onChange={handleChange}
-          required
-          className="w-full bg-zinc-900 border border-zinc-700 rounded-xl px-4 py-3 focus:outline-none focus:border-yellow-500"
-        >
-          <option value="">Select BYD Model</option>
-          <option value="Dolphin">BYD Dolphin</option>
-          <option value="Atto 3">BYD Atto 3</option>
-          <option value="Seal">BYD Seal</option>
-          <option value="Tang">BYD Tang</option>
-        </select>
+          <div className="md:col-span-2 flex justify-center gap-6 mt-4">
+            <label className="flex items-center gap-2 text-sm">
+              <input
+                type="radio"
+                name="type"
+                value="test_drive"
+                checked={formData.type === "test_drive"}
+                onChange={handleChange}
+              />
+              Book Test Drive
+            </label>
+            <label className="flex items-center gap-2 text-sm">
+              <input
+                type="radio"
+                name="type"
+                value="quote"
+                checked={formData.type === "quote"}
+                onChange={handleChange}
+              />
+              Request Quote
+            </label>
+          </div>
 
-        <div className="flex gap-5 justify-center mt-4">
-          <label className="flex items-center gap-2 text-sm">
-            <input
-              type="radio"
-              name="type"
-              value="test_drive"
-              checked={formData.type === "test_drive"}
-              onChange={handleChange}
-            />
-            Book Test Drive
-          </label>
-          <label className="flex items-center gap-2 text-sm">
-            <input
-              type="radio"
-              name="type"
-              value="quote"
-              checked={formData.type === "quote"}
-              onChange={handleChange}
-            />
-            Request Quote
-          </label>
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-yellow-500 text-black font-bold py-3 rounded-xl hover:bg-yellow-400 transition"
-        >
-          Submit & Chat on WhatsApp
-        </button>
-      </form>
+          <div className="md:col-span-2 flex justify-center mt-6">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.97 }}
+              type="submit"
+              className="bg-yellow-500 text-black text-lg font-semibold rounded-2xl px-10 py-4 hover:bg-yellow-400 transition-all"
+            >
+              Submit & Chat on WhatsApp
+            </motion.button>
+          </div>
+        </form>
+      </div>
     </section>
   );
 }
