@@ -2,10 +2,12 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { useRouter } from "next/navigation";
 
 export default function CostSavingsCalculator() {
   const [fuelCost, setFuelCost] = useState("");
   const [savings, setSavings] = useState(0);
+  const router = useRouter();
 
   useEffect(() => {
     const value = parseFloat(fuelCost.replace(/,/g, ""));
@@ -23,6 +25,10 @@ export default function CostSavingsCalculator() {
       currency: "NGN",
       maximumFractionDigits: 0,
     }).format(num);
+
+  const handleBookTestDrive = () => {
+    router.push("/?type=test_drive#enquiry");
+  };
 
   return (
     <section className="bg-gray-950 text-gray-100 py-16 md:py-24 px-6 md:px-16">
@@ -101,7 +107,10 @@ export default function CostSavingsCalculator() {
           viewport={{ once: true }}
           className="mt-12"
         >
-          <button className="bg-yellow-500 text-black font-semibold text-lg px-10 py-4 rounded-2xl hover:bg-yellow-400 transition-all">
+          <button
+            onClick={handleBookTestDrive}
+            className="bg-yellow-500 text-black font-semibold text-lg px-10 py-4 rounded-2xl hover:cursor-pointer hover:bg-yellow-400 transition-all"
+          >
             Book a Test Drive
           </button>
         </motion.div>

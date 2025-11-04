@@ -59,7 +59,7 @@ export default function HeroSection() {
   };
 
   return (
-    <section className="relative w-full h-screen bg-black text-gray-100 flex flex-col overflow-hidden md:-mt-2 lg:mt-0 -mt-4 lg:pb-12">
+    <section className="relative w-full h-screen bg-black text-gray-100 flex flex-col overflow-hidden md:-mt-4 lg:-mt-2 -mt-6 lg:pb-12">
       {/* === TOP IMAGE SLIDER === */}
       <div className="relative w-full lg:h-[75%] h-[70%] md:px-16">
         <div className="relative w-full h-full">
@@ -124,7 +124,7 @@ export default function HeroSection() {
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.8 }}
-                  className="md:text-3xl lg:text-5xl text-2xl font-bold uppercase text-gray-100 mb-3 md:mt-12"
+                  className="md:text-3xl lg:text-4xl text-2xl font-bold uppercase text-gray-100 mb-3 md:mt-12"
                 >
                   {slide.title}
                 </motion.h1>
@@ -171,13 +171,20 @@ export default function HeroSection() {
           background: #f1f1f1;
           border-radius: 50%;
           margin: 6px 0 !important;
-          opacity: 1;
+          opacity: 0.5;
+          border-width: 2px;
+          border-style: inset;
+          border-color: #f1f1f1;
           transition: transform 0.25s ease, background 0.25s ease;
         }
 
         :global(.custom-pagination .swiper-pagination-bullet-active) {
           background: #facc15;
-          transform: scale(1.3);
+          opacity: 0.5; 
+          transform: scale(1.5);
+          border-width: 2px;
+          border-style: inset;
+          border-color: #facc15;
         }
       `}</style>
     </section>

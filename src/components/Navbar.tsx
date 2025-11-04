@@ -4,17 +4,26 @@ import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-
+import { useRouter } from "next/navigation";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const router = useRouter();
+
+  const handleExploreNow = () => {
+    setOpen(false);
+    router.push("/?type=test_drive#enquiry");
+  };
 
   return (
     <nav className="fixed top-0 left-0 w-full z-50 bg-black bg-opacity-90 text-gray-100 border-b border-gray-800">
       <div className="mx-auto px-6 md:px-16 py-2 flex items-center justify-between">
         {/* === LOGO (Responsive, Sharp, No Height Impact) === */}
         <div className="flex items-center justify-center ">
-          <Link href={'/'} className="flex items-center justify-center w-full relative h-12 md:h-14 lg:h-16 ">
+          <Link
+            href={"/"}
+            className="flex items-center justify-center w-full relative h-10 md:h-12 lg:h-14 "
+          >
             <Image
               src="/logo/evlogo.png"
               alt="eVehicles ng Logo"
@@ -38,11 +47,6 @@ export default function Navbar() {
               Pricing
             </a>
           </li>
-          {/* <li>
-            <a href="#blog" className="hover:text-yellow-500 transition">
-              Blog
-            </a>
-          </li> */}
           <li>
             <a href="#faq" className="hover:text-yellow-500 transition">
               FAQ
@@ -52,10 +56,13 @@ export default function Navbar() {
 
         {/* === DESKTOP BUTTONS === */}
         <div className="hidden md:flex items-center lg:space-x-12 space-x-5">
-          <button className="text-base lg:text-lg px-6 py-3 lg:px-8 border border-yellow-500 text-yellow-500 font-semibold rounded-2xl hover:cursor-pointer hover:bg-yellow-500 hover:text-black transition-all">
+          <button className="text-base lg:text-lg px-6 py-2 lg:px-8 border border-yellow-500 text-yellow-500 font-semibold rounded-2xl hover:cursor-pointer hover:bg-yellow-500 hover:text-black transition-all">
             Contact
           </button>
-          <button className="text-base lg:text-lg px-6 py-3 lg:px-8 bg-yellow-500 text-black font-bold rounded-2xl hover:cursor-pointer hover:bg-yellow-400 transition-all">
+          <button
+            onClick={handleExploreNow}
+            className="text-base lg:text-lg px-6 py-2 lg:px-8 bg-yellow-500 text-black font-bold rounded-2xl hover:cursor-pointer hover:bg-yellow-400 transition-all"
+          >
             Explore Now
           </button>
         </div>
@@ -104,22 +111,29 @@ export default function Navbar() {
             {/* Links */}
             <ul className="text-gray-100 text-lg space-y-6 text-center">
               <li>
-                <a href="#about" onClick={() => setOpen(false)} className="hover:text-yellow-500 transition">
+                <a
+                  href="#about"
+                  onClick={() => setOpen(false)}
+                  className="hover:text-yellow-500 transition"
+                >
                   About Us
                 </a>
               </li>
               <li>
-                <a href="#pricing" onClick={() => setOpen(false)} className="hover:text-yellow-500 transition">
+                <a
+                  href="#pricing"
+                  onClick={() => setOpen(false)}
+                  className="hover:text-yellow-500 transition"
+                >
                   Pricing
                 </a>
               </li>
-              {/* <li>
-                <a href="#blog" onClick={() => setOpen(false)} className="hover:text-yellow-500 transition">
-                  Blog
-                </a>
-              </li> */}
               <li>
-                <a href="#faq" onClick={() => setOpen(false)} className="hover:text-yellow-500 transition">
+                <a
+                  href="#faq"
+                  onClick={() => setOpen(false)}
+                  className="hover:text-yellow-500 transition"
+                >
                   FAQ
                 </a>
               </li>
@@ -130,7 +144,10 @@ export default function Navbar() {
               <button className="w-full px-6 py-3 border border-yellow-500 text-yellow-500 text-base font-semibold rounded-full hover:bg-yellow-500 hover:text-black transition">
                 Contact
               </button>
-              <button className="w-full px-6 py-3 bg-yellow-500 text-black text-base font-bold rounded-full hover:bg-yellow-400 transition">
+              <button
+                onClick={handleExploreNow}
+                className="w-full px-6 py-3 bg-yellow-500 text-black text-base font-bold rounded-full hover:bg-yellow-400 transition"
+              >
                 Explore Now
               </button>
             </div>

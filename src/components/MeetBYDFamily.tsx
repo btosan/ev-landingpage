@@ -103,11 +103,11 @@ export default function MeetBYDFamily() {
               <div className="flex flex-wrap gap-4">
                 <button
                   onClick={handleBookTestDrive}
-                  className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-xl hover:bg-yellow-400 transition-all"
+                  className="px-6 py-3 bg-yellow-500 text-black font-semibold rounded-xl  hover:cursor-pointer hover:bg-yellow-400 transition-all"
                 >
                   Book Test Drive
                 </button>
-                <button className="px-6 py-3 border border-yellow-500 text-yellow-500 rounded-xl hover:bg-yellow-500 hover:text-black transition-all">
+                <button className="px-6 py-3 border border-yellow-500 text-yellow-500 rounded-xl  hover:cursor-pointer hover:bg-yellow-500 hover:text-black transition-all">
                   View Model
                 </button>
               </div>
