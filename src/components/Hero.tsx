@@ -7,7 +7,6 @@ import "swiper/css/pagination";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { useRef, useEffect } from "react";
-import { useRouter } from "next/navigation";
 
 const slides = [
   {
@@ -43,23 +42,19 @@ const slides = [
 export default function HeroSection() {
   const imageSwiperRef = useRef<any>(null);
   const textSwiperRef = useRef<any>(null);
-  const router = useRouter();
 
-  // ✅ Keep both swipers perfectly synced
+  // FIXED: Only image controls text — no circular loop
   useEffect(() => {
-    if (imageSwiperRef.current && textSwiperRef.current) {
-      imageSwiperRef.current.controller.control = textSwiperRef.current;
-      textSwiperRef.current.controller.control = imageSwiperRef.current;
-    }
+    const timer = setTimeout(() => {
+      if (imageSwiperRef.current && textSwiperRef.current) {
+        imageSwiperRef.current.controller.control = textSwiperRef.current;
+      }
+    }, 300);
+    return () => clearTimeout(timer);
   }, []);
 
-  // ✅ Navigate to enquiry form with type=test_drive
-  const handleBookTestDrive = () => {
-    router.push("/?type=test_drive#enquiry");
-  };
-
   return (
-    <section className="relative w-full h-screen bg-black text-gray-100 flex flex-col overflow-hidden md:-mt-4 lg:-mt-2 -mt-6 lg:pb-12">
+    <section className="relative w-full h-screen bg-black text-gray-100 flex flex-col overflow-hidden md:-mt-4 xl:-mt-2 lg:-mt-1 -mt-4 lg:pb-12">
       {/* === TOP IMAGE SLIDER === */}
       <div className="relative w-full lg:h-[75%] h-[70%] md:px-16">
         <div className="relative w-full h-full">
@@ -75,7 +70,6 @@ export default function HeroSection() {
             loop={true}
             slidesPerView={1}
             speed={1000}
-            controller={{ control: textSwiperRef.current }}
             onSwiper={(swiper) => (imageSwiperRef.current = swiper)}
             className="w-full h-full"
           >
@@ -115,7 +109,6 @@ export default function HeroSection() {
             autoplay={{ delay: 5000, disableOnInteraction: false }}
             loop={true}
             allowTouchMove={false}
-            controller={{ control: imageSwiperRef.current }}
             onSwiper={(swiper) => (textSwiperRef.current = swiper)}
           >
             {slides.map((slide, index) => (
@@ -124,7 +117,7 @@ export default function HeroSection() {
                   initial={{ y: 20, opacity: 0 }}
                   animate={{ y: 0, opacity: 1 }}
                   transition={{ duration: 0.8 }}
-                  className="md:text-3xl lg:text-4xl text-2xl font-bold uppercase text-gray-100 mb-3 md:mt-12"
+                  className="md:text-3xl lg:text-5xl text-2xl font-bold uppercase text-gray-100 mb-3 md:mt-12"
                 >
                   {slide.title}
                 </motion.h1>
@@ -138,16 +131,15 @@ export default function HeroSection() {
                   {slide.description}
                 </motion.p>
 
-                {/* ✅ CTA button – unchanged visually, now navigates to enquiry form */}
-                <motion.button
-                  onClick={handleBookTestDrive}
+                <motion.a
+                  href="/?type=test_drive#enquiry"
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}
                   className="bg-yellow-500 text-black text-lg lg:text-xl px-8 py-3 lg:px-12 lg:py-4 rounded-2xl font-semibold hover:cursor-pointer hover:bg-yellow-400 transition-all inline-block"
                 >
                   {slide.cta}
-                </motion.button>
+                </motion.a>
               </SwiperSlide>
             ))}
           </Swiper>
@@ -171,20 +163,13 @@ export default function HeroSection() {
           background: #f1f1f1;
           border-radius: 50%;
           margin: 6px 0 !important;
-          opacity: 0.5;
-          border-width: 2px;
-          border-style: inset;
-          border-color: #f1f1f1;
+          opacity: 1;
           transition: transform 0.25s ease, background 0.25s ease;
         }
 
         :global(.custom-pagination .swiper-pagination-bullet-active) {
           background: #facc15;
-          opacity: 0.5; 
-          transform: scale(1.5);
-          border-width: 2px;
-          border-style: inset;
-          border-color: #facc15;
+          transform: scale(1.3);
         }
       `}</style>
     </section>
