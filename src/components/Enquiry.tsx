@@ -134,9 +134,9 @@ export default function EnquiryForm() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.97 }}
               type="submit"
-              className="bg-yellow-500 text-black text-lg font-semibold rounded-2xl px-10 py-4 hover:bg-yellow-400 transition-all"
+              className="bg-yellow-500 text-black text-xl font-semibold uppercase rounded-2xl px-10 py-4 hover:bg-yellow-400 transition-all"
             >
-              Submit & Chat on WhatsApp
+              Submit
             </motion.button>
           </div>
         </form>
