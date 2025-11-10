@@ -43,9 +43,9 @@ export default function Navbar() {
             </a>
           </li>
           <li>
-            <a href="#pricing" className="hover:text-yellow-500 transition">
-              Pricing
-            </a>
+            <Link href="/models" className="hover:text-yellow-500 transition">
+              Models
+            </Link>
           </li>
           <li>
             <a href="#faq" className="hover:text-yellow-500 transition">
@@ -120,13 +120,13 @@ export default function Navbar() {
                 </a>
               </li>
               <li>
-                <a
-                  href="#pricing"
+                <Link
+                  href="/models"
                   onClick={() => setOpen(false)}
                   className="hover:text-yellow-500 transition"
                 >
-                  Pricing
-                </a>
+                  Models
+                </Link>
               </li>
               <li>
                 <a

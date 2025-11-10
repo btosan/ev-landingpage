@@ -10,40 +10,27 @@ import { useRef, useEffect } from "react";
 
 const slides = [
   {
-    image: "/assets/ev/models/byd-atto2.jpg",
-    title: "Drive the Future Today",
+    image: "/assets/byd/songplus.jpg",
+    title: "Modern SUV, Electric Power",
     description:
-      "Experience BYD’s all-electric innovation built for Nigerian roads.",
-    cta: "Explore Now",
-  },
-  {
-    image: "/assets/ev/models/byd-atto3.jpg",
-    title: "Smart. Stylish. Electric.",
-    description:
-      "The BYD Dolphin delivers power, comfort, and unbeatable efficiency.",
+      "Explore the 2026 BYD Song Plus – plug‑in hybrid sophistication meets Nigerian‑family versatility.",
     cta: "View Model",
+    slug: "song-plus"
   },
   {
-    image: "/assets/ev/models/byd-dolphin.jpg",
-    title: "Luxury Meets Sustainability",
+    image: "/assets/byd/byd-seagull.jpg",
+    title: "Bold. Electric. Intelligent.",
     description:
-      "Go farther with zero emissions in the spacious BYD Tang SUV.",
-    cta: "Discover More",
-  },
-  {
-    image: "/assets/ev/models/byd-han.jpg",
-    title: "Unleash Electric Performance",
-    description:
-      "Command attention with BYD Han — luxury and performance in perfect sync.",
-    cta: "Discover More",
-  },
+      "Discover the 2025 BYD Seagull – city‑smart all‑electric, up to 405km* range, built for Nigerian urban life.",
+    cta: "View Model",
+    slug: "seagull"
+  }
 ];
 
 export default function HeroSection() {
   const imageSwiperRef = useRef<any>(null);
   const textSwiperRef = useRef<any>(null);
 
-  // FIXED: Only image controls text — no circular loop
   useEffect(() => {
     const timer = setTimeout(() => {
       if (imageSwiperRef.current && textSwiperRef.current) {
@@ -54,7 +41,7 @@ export default function HeroSection() {
   }, []);
 
   return (
-    <section className="relative w-full h-screen bg-black text-gray-100 flex flex-col overflow-hidden md:-mt-4 xl:-mt-2 lg:-mt-1 -mt-6 lg:pb-12">
+    <section className="relative w-full h-screen bg-black text-gray-100 flex flex-col overflow-hidden md:-mt-4 xl:-mt-2 lg:-mt-2 -mt-6 lg:pb-12">
       {/* === TOP IMAGE SLIDER === */}
       <div className="relative w-full lg:h-[75%] h-[70%] md:px-16">
         <div className="relative w-full h-full">
@@ -102,7 +89,7 @@ export default function HeroSection() {
           </span>
         </div>
 
-        {/* RIGHT COLUMN */}
+        {/* RIGHT Column */}
         <div className="w-full md:w-4/5 md:text-right text-left">
           <Swiper
             modules={[Autoplay, Controller]}
@@ -132,7 +119,7 @@ export default function HeroSection() {
                 </motion.p>
 
                 <motion.a
-                  href="/?type=test_drive#enquiry"
+                  href={`/models/${slide.slug}`}
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 0.4 }}

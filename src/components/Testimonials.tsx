@@ -37,8 +37,8 @@ const testimonials = [
 
 export default function TestimonialsSection() {
   return (
-    <section className="bg-gray-900 text-gray-100 py-20 px-6 md:px-16">
-      <div className="max-w-6xl mx-auto text-center">
+    <section className="bg-gray-900 text-gray-100 py-20 px-6 md:px-16 xl:px-12">
+      <div className="max-w-6xl lg:max-w-7xl mx-auto text-center">
         {/* Heading */}
         <motion.h2
           initial={{ y: 20, opacity: 0 }}
@@ -61,7 +61,7 @@ export default function TestimonialsSection() {
         </motion.p>
 
         {/* Grid */}
-        <div className="mt-14 grid grid-cols-1 md:grid-cols-3 gap-10">
+        <div className="mt-14 grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-10">
           {testimonials.map((t, index) => (
             <motion.div
               key={index}
