@@ -70,7 +70,7 @@ const BYDModels = () => {
       </div>
       
       {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black via-black/30 to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-b from-black via-black/30 to-transparent" />
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 flex flex-col justify-between min-h-[calc(100vh-10rem)]">
