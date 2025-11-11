@@ -53,7 +53,7 @@ const faqs = [
   {
     question: "Where is eVehicles NG located?",
     answer:
-      "Our head office and primary delivery center are located in Lagos, Nigeria, with service and logistics partners in Abuja and Port Harcourt. Nationwide delivery and inspection are available."
+      "Our head office and primary delivery center are located in Port Harcourt, Nigeria, with service and logistics partners in Abuja and Lagos. Nationwide delivery and inspection are available."
   }
 ];
 
