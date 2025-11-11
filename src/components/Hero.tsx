@@ -11,18 +11,20 @@ import { useRef, useEffect } from "react";
 const slides = [
   {
     image: "/assets/byd/songplus.jpg",
+    name: "BYD Song Plus 2026",
     title: "Modern SUV, Electric Power",
     description:
-      "Explore the 2026 BYD Song Plus – plug‑in hybrid sophistication meets Nigerian‑family versatility.",
-    cta: "View Model",
+      "Explore the 2026 BYD Song Plus – plug-in hybrid sophistication meets Nigerian-family versatility.",
+    cta: "Explore Now",
     slug: "song-plus"
   },
   {
     image: "/assets/byd/byd-seagull.jpg",
+    name: "BYD Seagull 2025",
     title: "Bold. Electric. Intelligent.",
     description:
-      "Discover the 2025 BYD Seagull – city‑smart all‑electric, up to 405km* range, built for Nigerian urban life.",
-    cta: "View Model",
+      "Discover the 2025 BYD Seagull – city-smart all-electric, up to 405 km* range, built for Nigerian urban life.",
+    cta: "Explore Now",
     slug: "seagull"
   }
 ];
@@ -70,6 +72,10 @@ export default function HeroSection() {
                     className="object-cover rounded-xl lg:rounded-3xl"
                     priority={index === 0}
                   />
+                  {/* === MODEL NAME OVERLAY === */}
+                  <div className="absolute bottom-6 left-8 bg-black/40 backdrop-blur-sm text-white px-4 py-2 rounded-xl text-lg md:text-xl lg:text-2xl font-semibold">
+                    {slide.name}
+                  </div>
                 </div>
               </SwiperSlide>
             ))}
@@ -81,7 +87,7 @@ export default function HeroSection() {
       </div>
 
       {/* === BOTTOM TEXT & CTA === */}
-      <div className="relative w-full h-auto bg-black flex flex-col md:flex-row items-center justify-between px-6 md:px-16 md:py-4 py-8 ">
+      <div className="relative w-full h-auto bg-black flex flex-col md:flex-row items-center justify-between px-6 md:px-16 md:py-4 py-8">
         {/* LEFT COLUMN */}
         <div className="w-full md:w-1/5 flex justify-start md:justify-center mb-6 md:mb-0">
           <span className="text-yellow-400 uppercase tracking-widest text-sm font-medium">
@@ -89,7 +95,7 @@ export default function HeroSection() {
           </span>
         </div>
 
-        {/* RIGHT Column */}
+        {/* RIGHT COLUMN */}
         <div className="w-full md:w-4/5 md:text-right text-left">
           <Swiper
             modules={[Autoplay, Controller]}

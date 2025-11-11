@@ -3,7 +3,7 @@ import Image from "next/image"
 import Link from "next/link"
 import VehicleHighlightCarousel from '@/components/VehicleHighlightCarousel'
 
-// Demo model data – replace with real DB/data fetch 100km
+// Demo model data – replace with real DB/data fetch abuja 234
 const models = [
   {
     id: '1',
@@ -246,81 +246,80 @@ const models = [
     ],
     slug: "seal-u-dmi"
   },
-{
-  id: "10",
-  name: "BYD Song Plus EV",
-  image: "/assets/byd/song-plus-front.jpg",
-  gallery: [
-    "/assets/byd/songplus.jpg",
-    "/assets/byd/song-plus-back.jpg",
-    "/assets/byd/song-plus-3qv.jpg",
-    "/assets/byd/song-plus-back2.jpg",
-    "/assets/byd/song-plus-front.jpg",
-    "/assets/byd/song-plus-dashboard.jpg",
-    "/assets/byd/song-plus-bonnet.jpg",
-    "/assets/byd/song-plus-interior.jpg",
-    "/assets/byd/song-plus-handle.jpg",
-    "/assets/byd/song-plus-others.jpg",
-    "/assets/byd/song-plus-rear-mirror.jpg",
-    "/assets/byd/song-plus-steering.jpg",
-    "/assets/byd/song-plus-3qviewback.jpg"
-  ],
-  description: "The 2026 BYD Song Plus blends modern SUV styling with advanced electrified powertrains—offering family‑friendly space, BYD’s Blade Battery technology and intelligent connectivity for Nigeria’s roads.",
-  tagline: "Modern SUV, Electric Power",
-  specs: [
-    { label: "Electric Range (EV)", value: "Up to 605 km (CLTC) / ~500 km (WLTP)" },
-    { label: "0‑100 km/h", value: "≈ 9.6 s (EV version)" },
-    { label: "Battery Options", value: "71.8 kWh or 87.04 kWh Blade LFP" },
-    { label: "Motor", value: "Front Permanent‑Magnet Synchronous Motor (150‑160 kW)" },
-    { label: "Seats", value: "5" }
-  ],
-  features: [
-    "e‑Platform 3.0 architecture underpinning EV variant",
-    "Dragon Face 3.0 design aesthetic with ‘Heart of Ocean’ centre console layout",
-    "BYD Blade Battery safety and longevity (LFP chemistry)",
-    "Large rotating touchscreen (15.6‑inch) with smart cockpit connectivity",
-    "Panoramic sunroof, dual‑zone climate control and premium interior finishes",
-    "Vehicle‑to‑Load (V2L) functionality for powering external devices"
-  ],
-  slug: "song-plus"
-},
   {
-  id: "11",
-  name: "BYD SEAGULL",
-  image: "/assets/new/byd-seagull.jpg",
-  gallery: [
-    "/assets/new/byd-seagull-full-front-view.avif",
-    "/assets/new/byd-seagull-full-rear-view.avif",
-    "/assets/new/byd-seagull-side-view.avif",
-    "/assets/new/byd-seagull-dashboard-view.avif",
-    "/assets/new/byd-seagull-airbags-view.avif",
-    "/assets/new/byd-seagull-wheel.avif"
-  ],
-  description:
-    "The newest member of BYD’s Ocean Series, the SEAGULL redefines city mobility with its bold ‘Ocean Aesthetics’ design, ultra-safe Blade Battery, and advanced e-Platform 3.0 technology — delivering intelligence, safety, and efficiency in a compact, futuristic form.",
-  tagline: "Bold. Electric. Intelligent.",
-  specs: [
-    { label: "Electric Range", value: "Up to 405km (CLTC)" },
-    { label: "Fast Charging", value: "30%–80% in 30 minutes" },
-    { label: "Battery", value: "30.08kWh or 38.88kWh Blade Battery" },
-    { label: "Motor", value: "55kW Permanent Magnet Synchronous Motor" },
-    { label: "Platform", value: "e-Platform 3.0" },
-    { label: "Seats", value: "4" }
-  ],
-  features: [
-    "Ultra-Safe Blade Battery technology for maximum protection",
-    "30%–80% fast charging in just 30 minutes",
-    "Ocean Aesthetics design with sharp, flowing lines and a single-arc silhouette",
-    "‘Ice Crystal Frost’ C-pillar and full-width LED taillight design",
-    "Dazzling daytime running lights with six-strip detailing",
-    "‘Wave Shape’ dashboard with 10.1-inch floating touchscreen",
-    "Cyberpunk-style air conditioning vents with futuristic flair",
-    "High-quality integrated sports seats with ergonomic support",
-    "Comprehensive safety system with multiple airbags and side-curtain protection"
-  ],
-  slug: "seagull"
-},
-
+    id: "10",
+    name: "BYD Song Plus 2026",
+    image: "/assets/byd/song-plus-front.jpg",
+    gallery: [
+      "/assets/byd/songplus.jpg",
+      "/assets/byd/song-plus-back.jpg",
+      "/assets/byd/song-plus-3qv.jpg",
+      "/assets/byd/song-plus-back2.jpg",
+      "/assets/byd/song-plus-front.jpg",
+      "/assets/byd/song-plus-dashboard.jpg",
+      "/assets/byd/song-plus-bonnet.jpg",
+      "/assets/byd/song-plus-interior.jpg",
+      "/assets/byd/song-plus-handle.jpg",
+      "/assets/byd/song-plus-others.jpg",
+      "/assets/byd/song-plus-rear-mirror.jpg",
+      "/assets/byd/song-plus-steering.jpg",
+      "/assets/byd/song-plus-3qviewback.jpg"
+    ],
+    description: "The 2026 BYD Song Plus blends modern SUV styling with advanced electrified powertrains—offering family-friendly space, BYD’s Blade Battery technology and intelligent connectivity for Nigeria’s roads. Available now for immediate delivery nationwide.",
+    tagline: "Modern SUV, Electric Power",
+    specs: [
+      { label: "Electric Range (EV)", value: "Up to 605 km (CLTC) / ~500 km (WLTP)" },
+      { label: "0-100 km/h", value: "≈ 9.6 s (EV version)" },
+      { label: "Battery Options", value: "71.8 kWh or 87.04 kWh Blade LFP" },
+      { label: "Motor", value: "Front Permanent-Magnet Synchronous Motor (150-160 kW)" },
+      { label: "Seats", value: "5" },
+      { label: "Price", value: "₦64,900,000" }
+    ],
+    features: [
+      "e-Platform 3.0 architecture underpinning EV variant",
+      "Dragon Face 3.0 design aesthetic with ‘Heart of Ocean’ centre console layout",
+      "BYD Blade Battery safety and longevity (LFP chemistry)",
+      "Large 15.6-inch rotating touchscreen with BYD Intelligent Cockpit System",
+      "Panoramic sunroof, dual-zone climate control, and premium interior finishes",
+      "Vehicle-to-Load (V2L) functionality for powering external devices",
+      "Available for immediate delivery — limited units in Nigeria"
+    ],
+    slug: "song-plus"
+  },
+  {
+    id: "11",
+    name: "BYD SEAGULL",
+    image: "/assets/new/byd-seagull.jpg",
+    gallery: [
+      "/assets/new/byd-seagull-full-front-view.avif",
+      "/assets/new/byd-seagull-full-rear-view.avif",
+      "/assets/new/byd-seagull-side-view.avif",
+      "/assets/new/byd-seagull-dashboard-view.avif",
+      "/assets/new/byd-seagull-airbags-view.avif",
+      "/assets/new/byd-seagull-wheel.avif"
+    ],
+    description:
+      "Compact, intelligent, and ultra-efficient — the BYD Seagull is your perfect city EV, combining affordability, agility, and BYD’s trusted Blade Battery technology. Ideal for Nigerian roads and urban lifestyles. Available now in limited units.",
+    tagline: "Bold. Electric. Intelligent.",
+    specs: [
+      { label: "Electric Range", value: "Up to 405km (CLTC)" },
+      { label: "Fast Charging", value: "30%–80% in 30 minutes" },
+      { label: "Battery", value: "30.08 kWh or 38.88 kWh Blade Battery" },
+      { label: "Motor", value: "55 kW Permanent Magnet Synchronous Motor" },
+      { label: "Seats", value: "4" },
+      { label: "Price", value: "₦34,900,000" }
+    ],
+    features: [
+      "Ultra-Safe Blade Battery technology for maximum protection",
+      "Compact yet spacious — perfect for urban mobility",
+      "Ocean Aesthetics design with futuristic LED light signatures",
+      "10.1-inch touchscreen and smart connectivity features",
+      "Fast charging (30–80% in 30 minutes)",
+      "Affordable entry-level EV for Nigeria’s growing electric market",
+      "Available for immediate delivery — only 2 units left"
+    ],
+    slug: "seagull"
+  },
   {
     id: "12",
     name: "Voyah Dreamer (2025 Model)",
@@ -463,7 +462,7 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
                 </div>
               ))}
             </div>
-            {/* CTA */}
+            {/* CTAs */}
             <div className="w-full mx-auto flex flex-col items-center justify-center sm:flex-row gap-4">
               <Link
                 href={`/?type=test_drive&model=${model.slug}#enquiry`}
@@ -471,15 +470,15 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
               >
                 Enquire Now
               </Link>
-              {model.name === 'e-KEKE' && (
-                <a
-                  href="https://www.keketuktuk.com"
-                  target="_blank"
-                  className="inline-block px-8 py-3 rounded-full font-bold text-black bg-white shadow hover:bg-orange hover:text-white border-2 border-black hover:border-orange-400 transition-all text-lg uppercase tracking-wide"
-                >
-                  Electric Keke
-                </a>
-              )}
+              {/* WhatsApp CTA */}
+              <a
+                href={`https://wa.me/2348063887516?text=Hi!%20I'm%20interested%20in%20the%20${encodeURIComponent(model.name)}%20available%20in%20Nigeria`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block px-8 py-3 rounded-full font-bold text-white bg-green-600 hover:bg-green-700 shadow border-2 border-green-700 transition-all text-lg uppercase tracking-wide"
+              >
+                WhatsApp Sales
+              </a>
             </div>
           </div>
         </div>
