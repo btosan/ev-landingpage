@@ -38,9 +38,9 @@ export default function Navbar() {
         {/* === DESKTOP MENU === */}
         <ul className="hidden md:flex items-center space-x-10 text-sm font-medium">
           <li>
-            <a href="#about" className="hover:text-yellow-500 transition tracking-widest">
+            <Link href="/about" className="hover:text-yellow-500 transition tracking-widest">
               About Us
-            </a>
+            </Link>
           </li>
           <li>
             <Link href="/models" className="hover:text-yellow-500 transition tracking-widest">
