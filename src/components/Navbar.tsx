@@ -87,7 +87,7 @@ export default function Navbar() {
             className="fixed inset-0 bg-black bg-opacity-95 flex flex-col justify-start items-center space-y-8 z-40"
           >
             {/* Logo + Close */}
-            <div className="w-full flex items-center justify-between px-6 pt-6">
+            <div className="w-full flex items-center justify-between px-6 pt-2">
               <div className="flex justify-center w-full">
                 <div className="relative w-48 h-32">
                   <Image
@@ -109,15 +109,15 @@ export default function Navbar() {
             </div>
 
             {/* Links */}
-            <ul className="text-gray-100 text-lg space-y-6 text-center">
+            <ul className="text-gray-100 text-lg space-y-8 text-center">
               <li>
-                <a
-                  href="#about"
+                <Link
+                  href="/about"
                   onClick={() => setOpen(false)}
                   className="hover:text-yellow-500 transition"
                 >
                   About Us
-                </a>
+                </Link>
               </li>
               <li>
                 <Link
@@ -129,13 +129,13 @@ export default function Navbar() {
                 </Link>
               </li>
               <li>
-                <a
-                  href="#faq"
+                <Link
+                  href="/faqs"
                   onClick={() => setOpen(false)}
                   className="hover:text-yellow-500 transition"
                 >
                   FAQ
-                </a>
+                </Link>
               </li>
             </ul>
 
