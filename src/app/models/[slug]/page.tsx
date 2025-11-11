@@ -425,7 +425,7 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
   return (
     <main className="min-h-screen bg-white flex flex-col">
       {/* Hero Section */}
-      <section className="relative w-full bg-gradient-to-tr from-gray-100 via-white to-gray-50 shadow-xl">
+      <section className="relative w-full bg-linear-to-tr from-gray-100 via-white to-gray-50 shadow-xl">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center py-10 md:py-20 px-4 md:px-10 gap-12 md:gap-16">
           {/* Image */}
           <div className="flex-1 flex flex-col items-center justify-center lg:-mt-12">
@@ -437,7 +437,7 @@ export default async function ModelPage({ params }: { params: Promise<{ slug: st
                 src={model.image}
                 alt={model.name}
                 fill
-                className="object-contain"
+                className="object-cover"
                 sizes="(max-width: 768px) 90vw, (max-width: 1200px) 50vw, 600px"
                 priority
               />
