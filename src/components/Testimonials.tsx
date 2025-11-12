@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const testimonials = [
   {
-    name: "Chinedu A.",
+    name: "Chinoye A.",
     location: "Lagos",
-    image: "/assets/people/igbo-man.png",
+    image: "/assets/people/igbo-lady.png",
     quote:
       "I drive from Lekki to Ikeja daily — my BYD Dolphin saves me over ₦100,000 monthly on fuel. Smooth, silent, and stylish! eVehicles NG made the whole process effortless.",
   },
