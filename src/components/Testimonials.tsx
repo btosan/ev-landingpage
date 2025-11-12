@@ -12,7 +12,7 @@ const testimonials = [
       "I drive from Lekki to Ikeja daily — my BYD Dolphin saves me over ₦100,000 monthly on fuel. Smooth, silent, and stylish! eVehicles NG made the whole process effortless.",
   },
   {
-    name: "Kemi O.",
+    name: "Kemi A.",
     location: "Abuja",
     image: "/assets/people/yoruba-lady.png",
     quote:
@@ -26,7 +26,7 @@ const testimonials = [
       "Maintenance is almost zero — just tires and washing. I’ll never go back to petrol again. eVehicles NG’s after-sales team checks in regularly — that’s real service!",
   },
   {
-    name: "Stanley O.",
+    name: "Stanley U.",
     location: "Enugu",
     image: "/assets/people/igbo-man.png",
     quote:
