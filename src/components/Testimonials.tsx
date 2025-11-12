@@ -7,28 +7,28 @@ const testimonials = [
   {
     name: "Chinedu A.",
     location: "Lagos",
-    image: "/assets/people/shop-woman.jpg",
+    image: "/assets/people/igbo-man.png",
     quote:
       "I drive from Lekki to Ikeja daily — my BYD Dolphin saves me over ₦100,000 monthly on fuel. Smooth, silent, and stylish! eVehicles NG made the whole process effortless.",
   },
   {
-    name: "Aisha K.",
+    name: "Kemi O.",
     location: "Abuja",
-    image: "/assets/people/ngugiwa.jpg",
+    image: "/assets/people/yoruba-lady.png",
     quote:
       "The Atto 3 is a dream. I charge at home overnight and never worry about queues or petrol prices again. eVehicles NG guided me from test drive to delivery seamlessly.",
   },
   {
     name: "Tunde O.",
     location: "Port Harcourt",
-    image: "/assets/people/woman.jpg",
+    image: "/assets/people/yoruba-man.png",
     quote:
       "Maintenance is almost zero — just tires and washing. I’ll never go back to petrol again. eVehicles NG’s after-sales team checks in regularly — that’s real service!",
   },
   {
-    name: "Chimsom O.",
+    name: "Stanley O.",
     location: "Enugu",
-    image: "/assets/people/woman2.jpg",
+    image: "/assets/people/igbo-man.png",
     quote:
       "My BYD Tang is the best decision I’ve made for my family. Spacious, powerful, and eco-friendly. eVehicles NG handled everything, including home charging setup.",
   },
