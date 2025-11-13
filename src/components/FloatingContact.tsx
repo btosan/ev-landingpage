@@ -10,7 +10,7 @@ export default function FloatingContact() {
 
   // Replace with your actual contact info  hello
   const phoneNumber = "+2348063887516";
-  const whatsappNumber = "+2348063887516";
+  const whatsappNumber = "+2348099549798";
   const whatsappMessage = "Hello! I'd like to know more about your BYD cars.";
   const emailAddress = "evehiclesng@gmail.com";
   const emailSubject = "Inquiry about eVehicles";

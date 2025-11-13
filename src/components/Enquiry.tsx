@@ -34,7 +34,7 @@ export default function EnquiryForm() {
       formData.type === "test_drive" ? "book a test drive" : "request a quote"
     }. My number is ${formData.phone}.`;
 
-    const url = `https://wa.me/2348063887516?text=${encodeURIComponent(msg)}`;
+    const url = `https://wa.me/2348099549798?text=${encodeURIComponent(msg)}`;
     window.open(url, "_blank");
   };
 
@@ -110,10 +110,10 @@ export default function EnquiryForm() {
             className="w-full p-4 rounded-xl bg-gray-800 border border-gray-700 text-gray-100 focus:border-yellow-500 outline-none md:col-span-2"
           >
             <option value="">Select BYD Model</option>
-            <option value="Dolphin">BYD Dolphin</option>
-            <option value="Atto 3">BYD Atto 3</option>
-            <option value="Seal">BYD Seal</option>
-            <option value="Tang">BYD Tang</option>
+            <option value="Song Plus">2026 BYD Song Plus</option>
+            <option value="Seagull">BYD Seagull</option>
+            {/* <option value="Seal">BYD Seal</option>
+            <option value="Tang">BYD Tang</option> */}
           </select>
 
           <div className="md:col-span-2 flex justify-center gap-6 mt-4">
