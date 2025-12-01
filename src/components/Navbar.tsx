@@ -141,9 +141,9 @@ export default function Navbar() {
 
             {/* Mobile Buttons */}
             <div className="flex flex-col items-center space-y-6 mt-6 w-3/4">
-              <button className="w-full px-6 py-3 border border-yellow-500 text-yellow-500 text-base font-semibold rounded-full hover:bg-yellow-500 hover:text-black transition">
+              <Link href='/contact' className="w-full px-6 py-3 border border-yellow-500 text-yellow-500 text-base font-semibold rounded-full hover:bg-yellow-500 hover:text-black transition">
                 Contact
-              </button>
+              </Link>
               <button
                 onClick={handleExploreNow}
                 className="w-full px-6 py-3 bg-yellow-500 text-black text-base font-bold rounded-full hover:bg-yellow-400 transition"

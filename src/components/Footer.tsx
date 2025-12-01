@@ -8,7 +8,7 @@ export default function Footer() {
         {/* === CONTACT === */}
         <div>
           <h3 className="text-yellow-500 font-semibold mb-3">Contact</h3>
-          <p>Lagos, Nigeria</p>
+          <p>Lagos, Port Harcourt, Abuja, and other major cities across Nigeria</p>
           <p>
             <a
               href="tel:+2348063887516"
