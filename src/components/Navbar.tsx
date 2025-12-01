@@ -56,9 +56,9 @@ export default function Navbar() {
 
         {/* === DESKTOP BUTTONS === */}
         <div className="hidden md:flex items-center lg:space-x-12 space-x-5">
-          <button className="text-base lg:text-lg px-6 py-2 lg:px-8 border border-yellow-500 text-yellow-500 font-semibold rounded-2xl hover:cursor-pointer hover:bg-yellow-500 hover:text-black transition-all">
+          <Link href='/contact' className="text-base lg:text-lg px-6 py-2 lg:px-8 border border-yellow-500 text-yellow-500 font-semibold rounded-2xl hover:cursor-pointer hover:bg-yellow-500 hover:text-black transition-all">
             Contact
-          </button>
+          </Link>
           <button
             onClick={handleExploreNow}
             className="text-base lg:text-lg px-6 py-2 lg:px-8 bg-yellow-500 text-black font-bold rounded-2xl hover:cursor-pointer hover:bg-yellow-400 transition-all"
