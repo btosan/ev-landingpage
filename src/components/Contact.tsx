@@ -63,7 +63,7 @@ export default function ContactSection() {
           <div
             className="text-center lg:text-left"
           >
-            <h2 className="text-4xl md:text-5xl font-bold mb-6 text-yellow-500">
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold mb-6 text-yellow-500">
               Contact eVehicles NG
             </h2>
             <p className="text-gray-400 text-lg">
@@ -213,7 +213,7 @@ export default function ContactSection() {
             <div className="md:col-span-2 text-center">
               <button
                 type="submit"
-                className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-xl uppercase rounded-2xl px-12 py-5 transition-all shadow-lg"
+                className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold md:text-xl text-lg uppercase rounded-2xl lg:px-12 md:px-10 px-6 lg:py-5 md:py-4 py-3 transition-all shadow-lg"
               >
                 Send via WhatsApp
               </button>

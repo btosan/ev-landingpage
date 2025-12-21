@@ -15,7 +15,7 @@ export default function AboutPage() {
           transition={{ duration: 0.6 }}
           className="text-center mb-16"
         >
-          <h1 className="text-4xl md:text-6xl font-bold uppercase mb-4 tracking-wide">
+          <h1 className="text-3xl lg:text-6xl md:text-5xl font-bold uppercase mb-4 tracking-wide">
             About Exulted Eagles Nigeria Limited
           </h1>
           <p className="text-gray-300 max-w-3xl mx-auto text-lg md:text-xl leading-relaxed">
@@ -92,7 +92,7 @@ export default function AboutPage() {
           transition={{ duration: 0.8 }}
           className="bg-[#0a0a0a] rounded-3xl p-10 md:p-16 mb-24 border border-gray-800"
         >
-          <h2 className="text-3xl md:text-4xl font-bold mb-8 uppercase text-yellow-400">
+          <h2 className="text-xl md:text-2xl lg:text-3xl font-bold mb-8 uppercase text-yellow-400">
             Why Nigerians Choose eVehicles NG
           </h2>
           <ul className="space-y-6 text-gray-300 text-lg leading-relaxed list-disc pl-6">
@@ -135,7 +135,7 @@ export default function AboutPage() {
           transition={{ duration: 0.8 }}
           className="mb-24"
         >
-          <h2 className="text-3xl md:text-4xl font-bold text-yellow-400 uppercase mb-8 text-center">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold text-yellow-400 uppercase mb-8 text-center">
             Our Partners & Dealership Network
           </h2>
           <p className="text-gray-300 text-lg leading-relaxed max-w-4xl mx-auto text-center mb-10">
@@ -227,7 +227,7 @@ export default function AboutPage() {
           </p>
           <Link
             href="/models/song-plus"
-            className="bg-yellow-500 text-black px-10 py-4 rounded-full font-bold uppercase tracking-widest hover:bg-yellow-400 transition-all inline-block"
+            className="bg-yellow-500 text-black px-10 py-4 mb-4 rounded-full font-bold uppercase tracking-widest hover:bg-yellow-400 transition-all inline-block"
           >
             View BYD Song Plus
           </Link>
