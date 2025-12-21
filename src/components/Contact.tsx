@@ -73,9 +73,6 @@ export default function ContactSection() {
           </div>
 
           <div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
             className="space-y-8 bg-gray-900 p-8 rounded-2xl border border-gray-800"
           >
             {/* Physical Address */}
@@ -215,8 +212,6 @@ export default function ContactSection() {
 
             <div className="md:col-span-2 text-center">
               <button
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.97 }}
                 type="submit"
                 className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-xl uppercase rounded-2xl px-12 py-5 transition-all shadow-lg"
               >
