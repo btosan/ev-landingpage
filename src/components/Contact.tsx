@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
+// import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, MessageCircle } from "lucide-react";
 
 export default function ContactSection() {
@@ -60,10 +60,7 @@ export default function ContactSection() {
       <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16">
         {/* Left: Contact Info */}
         <div className="space-y-10">
-          <motion.div
-            initial={{ x: -50, opacity: 0 }}
-            whileInView={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.7 }}
+          <div
             className="text-center lg:text-left"
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-6 text-yellow-500">
@@ -73,9 +70,9 @@ export default function ContactSection() {
               Visit our showroom, call us, or message directly on WhatsApp.
               We're here to help you go electric.
             </p>
-          </motion.div>
+          </div>
 
-          <motion.div
+          <div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.3 }}
@@ -121,23 +118,18 @@ export default function ContactSection() {
             </div>
 
             {/* Direct WhatsApp Button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
+            <button
               onClick={openWhatsApp}
               className="w-full bg-green-600 hover:bg-green-700 text-white font-bold py-5 px-8 rounded-2xl flex items-center justify-center gap-3 transition-all shadow-lg"
             >
               <MessageCircle className="w-7 h-7" />
               Chat on WhatsApp
-            </motion.button>
-          </motion.div>
+            </button>
+          </div>
         </div>
 
         {/* Right: Enquiry Form */}
-        <motion.div
-          initial={{ x: 50, opacity: 0 }}
-          whileInView={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.7 }}
+        <div
           className="bg-gray-900 p-8 rounded-2xl shadow-xl border border-gray-800"
         >
           <h3 className="text-3xl font-bold text-center mb-8 text-yellow-500">
@@ -222,17 +214,17 @@ export default function ContactSection() {
             </div>
 
             <div className="md:col-span-2 text-center">
-              <motion.button
+              <button
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.97 }}
                 type="submit"
                 className="bg-yellow-500 hover:bg-yellow-400 text-black font-bold text-xl uppercase rounded-2xl px-12 py-5 transition-all shadow-lg"
               >
                 Send via WhatsApp
-              </motion.button>
+              </button>
             </div>
           </form>
-        </motion.div>
+        </div>
       </div>
     </section>
   );
