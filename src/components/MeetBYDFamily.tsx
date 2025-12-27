@@ -32,7 +32,7 @@ export default function MeetBYDFamily() {
       description:
         "Compact and efficient city EV — perfect for urban professionals and fleet use.",
       specs: "Range: 405km | Fast Charge: 40min | Units Available: 2",
-      price: "₦34,900,000",
+      price: "₦37,900,000",
       image: "/assets/byd/seagull-2025.jpg",
       cta: "Reserve Now",
     },

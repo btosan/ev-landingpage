@@ -307,7 +307,7 @@ const models = [
       { label: "Battery", value: "30.08 kWh or 38.88 kWh Blade Battery" },
       { label: "Motor", value: "55 kW Permanent Magnet Synchronous Motor" },
       { label: "Seats", value: "4" },
-      { label: "Price", value: "₦34,900,000" }
+      { label: "Price", value: "₦37,900,000" }
     ],
     features: [
       "Ultra-Safe Blade Battery technology for maximum protection",
